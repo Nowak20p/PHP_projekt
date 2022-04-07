@@ -12,6 +12,25 @@ $check = $_POST['check'];
 $submit = $_POST['submit'];
 
 
+$nazwaVal = '/^[A-Za-z]{1,}+[0-9]{0,}$/u';
+$hasloVal = '/^.{5,}+$/u';
+$emailVal = '/^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/';
+$miastoVal = '/^[A-Za-zĄĘĆŁŃÓŚŻŹąęćłńóśżź]{3,100}$|^[A-Za-zĄĘĆŁŃÓŚŻŹąęćłńóśżź]+[A-Za-zĄĘĆŁŃÓŚŻŹąęćłńóśżź0-9\s\-]+[A-Za-zĄĘĆŁŃÓŚŻŹąęćłńóśżź0-9]{1,100}$/';
+$kodVal = '/^[0-9]{2}-[0-9]{3}$/';
+$ulicaVal = '/^[A-Za-zĄĘĆŁŃÓŚŻŹąęćłńóśżź]{3,100}$|^[A-Za-zĄĘĆŁŃÓŚŻŹąęćłńóśżź]+[A-Za-zĄĘĆŁŃÓŚŻŹąęćłńóśżź0-9\s\-\.\/]+[A-Za-zĄĘĆŁŃÓŚŻŹąęćłńóśżź0-9]{1,100}$/';
+
+
+if(preg_match($nazwaVal,$nazwa)||(preg_match($hasloVal,$haslo)||(preg_match($emailVal,$email)||(preg_match($miastoVal,$miasto)||(preg_match($miastoVal,$miasto)
+
+
+
+
+
+
+
+
+
+
 
 
 
