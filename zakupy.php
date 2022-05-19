@@ -6,7 +6,8 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script src="https://kit.fontawesome.com/bade884e9c.js" crossorigin="anonymous"></script>
-      <title>Promocje</title>
+      <link rel="stylesheet" href="zakupy.css">
+      <title>Zakupy</title>
       <style>
             body{
     background-color:#F5C311;
@@ -63,6 +64,8 @@ a:hover{
       transform: scale(0.9);
       transition: 1s;
 }
+
+
 </style>
 </head>
 
@@ -70,11 +73,24 @@ a:hover{
       <nav class="nawigacja">
             <img src="logo.png" alt="logo strony napis oraz widelec i nóż">
           <a  href="strona_glowna.html">O nas <hr></a>
-          <a href="zakupy.php">Zakupy <hr></a>
-          <a  class="active" href="promocje.html">Promocje <hr></a>
+          <a class="active"href="zakupy.php">Zakupy <hr></a>
+          <a href="promocje.html">Promocje <hr></a>
           <a href="koszyk.html"><i class="fa-solid fa-cart-shopping"></i></a>
         </nav>
-<p>pro</p>
+
+        <?php
+            $fileJson = file_get_contents("oferty.json");
+            $tablica = json_decode($fileJson);
+            echo "<div class='oferta'>"."<div class='restauracja'>".$tablica->oferty[0]->restauracja."</div>".    "<div class='danie'>".$tablica->oferty[0]->danie."</div>".    "<div class='cena'>".$tablica->oferty[0]->cena."</div>".    "<img  class='zdjecie' src=".$tablica->oferty[0]->zdjecie." alt='zdjecie jedzenia'>"."</div>";
+            echo "<div class='oferta'>"."<div class='restauracja'>".$tablica->oferty[1]->restauracja."</div>".    "<div class='danie'>".$tablica->oferty[1]->danie."</div>".    "<div class='cena'>".$tablica->oferty[1]->cena."</div>".    "<img  class='zdjecie' src=".$tablica->oferty[1]->zdjecie." alt='zdjecie jedzenia'>"."</div>";
+            echo "<div class='oferta'>"."<div class='restauracja'>".$tablica->oferty[2]->restauracja."</div>".    "<div class='danie'>".$tablica->oferty[2]->danie."</div>".    "<div class='cena'>".$tablica->oferty[2]->cena."</div>".    "<img  class='zdjecie' src=".$tablica->oferty[2]->zdjecie." alt='zdjecie jedzenia'>"."</div>";
+            ?>
+
+
+      
+        
+
+
       
       
  

@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 $nazwa = $_POST['nazwa'];
 $haslo = $_POST['haslo'];
 
@@ -34,6 +34,8 @@ if ($index == -1) {
 if ($index != -1) {
     $users = $GLOBALS['string_z_jsona']->users;
     if ($users[$index]->haslo == $haslo) {
+        session_start();
+        $_SESSION["user"]=$users[$index];
         header("location:strona_glowna.html");
     } else {
         echo "zły login lub hasło";
