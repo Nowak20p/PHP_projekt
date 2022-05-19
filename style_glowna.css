@@ -1,7 +1,33 @@
 body{
-    background-color:bisque;
+    background-color:#F5C311;
 }
 
 i{
-    font-size: 30px;
+    margin-top: 10px;
+    font-size: 35px;
 }
+nav{
+    background-color:#F5C311;
+}
+
+nav{
+    font-size: 25px;
+    
+}
+
+nav > a{
+    color: #000!important;
+
+}
+
+.active{
+    font-size: 29px!important;
+    background-color: transparent!important;
+}
+
+
+/* #FAE605
+#FAE605
+#F5C311
+#E0A83F
+#FFAC25 */

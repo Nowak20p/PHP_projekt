@@ -34,7 +34,7 @@ if ($index == -1) {
 if ($index != -1) {
     $users = $GLOBALS['string_z_jsona']->users;
     if ($users[$index]->haslo == $haslo) {
-        header("location:test.html");
+        header("location:strona_glowna.html");
     } else {
         echo "zły login lub hasło";
     }
